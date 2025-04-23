@@ -1,129 +1,138 @@
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inicio Proyecto Odín</title>
 <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
- 
-        h1 {
-            text-align: center;
-            color: #d1a200;
-        }
- 
-        .container {
-            width: 80%;
-            height: 200px;
-            margin: 20px;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 1s ease;
-        }
- 
-        .container img {
-            width: 150px;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 8px;
-        }
- 
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: #fff;
-        }
- 
-        .container-olympian {
-            background-color: #4caf50; /* Color Olimpo */
-        }
- 
-        .container-odin {
-            background-color: #212121; /* Color Odín */
-        }
- 
-        .container:nth-child(even) {
-            background-color: #673ab7; /* Color Olimpo */
-        }
- 
-        .container:nth-child(odd) {
-            background-color: #212121; /* Color Odín */
-        }
- 
-        .container:nth-child(1) img {
-            border: 5px solid #d1a200;
-        }
- 
-        .container:nth-child(2) img {
-            border: 5px solid #4caf50;
-        }
- 
-        @keyframes colorChange {
-            0% { background-color: #4caf50; }
-            50% { background-color: #673ab7; }
-            100% { background-color: #212121; }
-        }
- 
-    </style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-image: url('https://img.freepik.com/fotos-premium/fondo-rocoso-piedra-porosa-textura-piedra-beige-aspera_624840-372.jpg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        text-align: center;
+        color: #d1a200;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: 80%;
+        height: 200px;
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 1s ease;
+    }
+
+    .container:hover {
+        transform: scale(1.05);
+    }
+
+    .container img {
+        width: 150px;
+        height: auto;
+        margin-right: 20px;
+        border-radius: 8px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .container-olympian {
+        background-color: #4caf50; /* Color Olimpo */
+    }
+
+    .container-odin {
+        background-color: #212121; /* Color Odín */
+    }
+
+    .container:nth-child(even) {
+        background-color: #673ab7; /* Color Olimpo */
+    }
+
+    .container:nth-child(odd) {
+        background-color: #212121; /* Color Odín */
+    }
+
+    .container:nth-child(1) img {
+        border: 5px solid #d1a200;
+    }
+
+    .container:nth-child(2) img {
+        border: 5px solid #4caf50;
+    }
+
+    @keyframes colorChange {
+        0% { background-color: #4caf50; }
+        50% { background-color: #673ab7; }
+        100% { background-color: #212121; }
+    }
+</style>
 </head>
 <body>
- 
-    <h1>Proyecto Odín</h1>
- 
-    <div class="container container-olympian">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv9sHMNo9aN2iW1dHrXoxglYJgfvZDS_xYvA&s" alt="Imagen Olimpo">
-<div class="content">
-<h2>Matemáticas</h2>
-<p>Aqui tendras conocimientos básicos y avanzados de matématicas como divisiones, potencias, radicales, polinomios y algebra. Antes debes tener conocimientos previos de sumas, resta y multiplicación.</p>
+
+<h1>Proyecto Odín</h1>
+
+<div class="container container-olympian" onclick="window.location.href='pagina-matematicas.html';">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv9sHMNo9aN2iW1dHrXoxglYJgfvZDS_xYvA&s" alt="Imagen Olimpo">
+    <div class="content">
+        <h2>Matemáticas</h2>
+        <p>Aqui tendrás conocimientos básicos y avanzados de matemáticas como divisiones, potencias, radicales, polinomios y álgebra. Antes debes tener conocimientos previos de sumas, resta y multiplicación.</p>
+    </div>
 </div>
+
+<div class="container container-odin" onclick="window.location.href='pagina-historia.html';">
+    <img src="https://nectaryambrosia.wordpress.com/wp-content/uploads/2017/09/50b1327091444.jpg" alt="Imagen Odín">
+    <div class="content">
+        <h2>Historia</h2>
+        <p>Aquí aprenderás y conocerás la historia de Colombia hasta la actualidad e historias importantes a nivel mundial. No se necesitan conocimientos previos.</p>
+    </div>
 </div>
- 
-    <div class="container container-odin">
-<img src="https://nectaryambrosia.wordpress.com/wp-content/uploads/2017/09/50b1327091444.jpg" alt="Imagen Odín">
-<div class="content">
-<h2>Historia</h2>
-<p>Aquí aprenderas y conoceras la historia de colombia hasta la cactualidad e historias importantes a nivel mundial. No se nececitan conocimientos previos</p>
+
+<div class="container container-olympian" onclick="window.location.href='pagina-quimica.html';">
+    <img src="https://newmedia.ufm.edu/wp-content/uploads/2016/12/coverfacebook-salvadoraguado-ufm-final.png" alt="Imagen Olimpo">
+    <div class="content">
+        <h2>Química</h2>
+        <p>Aquí aprenderás los conocimientos fundamentales de la química y la ciencia. No se necesitan conocimientos previos.</p>
+    </div>
 </div>
+
+<div class="container container-odin" onclick="window.location.href='pagina-tecnologia.html';">
+    <img src="https://eontd.com/wp-content/uploads/2023/05/soluciones-ti-scaled.jpg" alt="Imagen Odín">
+    <div class="content">
+        <h2>Tecnología</h2>
+        <p>Tendrás conocimientos de las máquinas de comunicación y su evolución, sabrás cómo convertir números decimales a binario y viceversa, así como tener fundamentos de programación y circuitos. No se necesitan conocimientos previos.</p>
+    </div>
 </div>
- 
-    <div class="container container-olympian">
-<img src="https://newmedia.ufm.edu/wp-content/uploads/2016/12/coverfacebook-salvadoraguado-ufm-final.png" alt="Imagen Olimpo">
-<div class="content">
-<h2>Quimica</h2>
-<p>Aquí aprenderas los conocimientos fundamentales de la quimica y ciencia. No se necesitan conocimientos previos</p>
-</div>
-</div>
- 
-    <div class="container container-odin">
-<img src="https://eontd.com/wp-content/uploads/2023/05/soluciones-ti-scaled.jpg" alt="Imagen Odín">
-<div class="content">
-<h2>Tecnología</h2>
-<p>Tendrás conocimientos de las maquinas de comunicación y su evolución, sabrás a como convertir números decimales a binario y biseversa, a tener fundamentos de programación y circuitos. No se nececitan conocimientos previos</p>
-</div>
-</div>
- 
-    <script>
-        // Cambiar el color de los contenedores cada 3 segundos
-        setInterval(() => {
-            const containers = document.querySelectorAll('.container');
-            containers.forEach(container => {
-                container.classList.toggle('container-olympian');
-                container.classList.toggle('container-odin');
-            });
-        }, 3000);  // Cambiar de color cada 3 segundos
+
+<script>
+    // Cambiar el color de los contenedores cada 3 segundos
+    setInterval(() => {
+        const containers = document.querySelectorAll('.container');
+        containers.forEach(container => {
+            container.classList.toggle('container-olympian');
+            container.classList.toggle('container-odin');
+        });
+    }, 3000);  // Cambiar de color cada 3 segundos
 </script>
- 
+
 </body>
 </html>
