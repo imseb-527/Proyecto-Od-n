@@ -180,3 +180,32 @@ body, html {
   animation: crecerOdín 2s ease forwards;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
 }
+.ia-asistente {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.ia-asistente img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #673ab7;
+  box-shadow: 0 0 10px #673ab7aa;
+}
+
+.mensaje-ia {
+  background-color: #eee;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 12px;
+  max-width: 250px;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
