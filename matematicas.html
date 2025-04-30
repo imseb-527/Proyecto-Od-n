@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Matemáticas</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <section class="matematicas">
-    <h1>📘 Matemáticas</h1>
-    <p>Bienvenido al apartado de matemáticas. Aquí encontrarás explicaciones claras de los temas más importantes que necesitas dominar. Haz clic en el tema que te interese para explorarlo en profundidad.</p>
-
-    <div class="tema">
-      <h2>🔹 Álgebra</h2>
-      <p>El álgebra es una rama de las matemáticas que utiliza letras y símbolos para representar números y relaciones entre ellos. Permite resolver ecuaciones, representar patrones y modelar situaciones reales.</p>
-      <a href="algebra.html" class="ver-mas">➡️ Ver más sobre Álgebra</a>
+  <div class="navbar">
+    <div class="logo">Mi Estudio</div>
+    <div class="enlaces">
+      <a href="index.html">Inicio</a>
+      <a href="matematicas.html">Matemáticas</a>
+      <a href="contacto.html">Contacto</a>
     </div>
+  </div>
 
-    <div class="tema">
-      <h2>🔹 Geometría</h2>
-      <p>La geometría se enfoca en las formas, tamaños, posiciones y propiedades del espacio. Estudia puntos, líneas, ángulos, figuras planas y cuerpos tridimensionales.</p>
-      <a href="geometria.html" class="ver-mas">➡️ Ver más sobre Geometría</a>
-    </div>
+  <div class="container">
+    <div class="derecha" style="padding-top: 100px; width: 100%;">
+      <h2 class="subtitulo">📘 Área de Matemáticas</h2>
+      <p class="descripcion" style="text-align:center;">Explora los temas fundamentales de las matemáticas con explicaciones claras y recursos visuales. Haz clic para aprender más.</p>
 
-    <div class="tema">
-      <h2>🔹 Aritmética</h2>
-      <p>Es la base de las matemáticas. Incluye operaciones con números reales como la suma, resta, multiplicación y división, así como conceptos como múltiplos, divisores, fracciones y decimales.</p>
-      <a href="aritmetica.html" class="ver-mas">➡️ Ver más sobre Aritmética</a>
-    </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+        <div class="materia" onclick="location.href='algebra.html'">
+          <img src="https://st.depositphotos.com/4315033/54588/v/450/depositphotos_545883786-stock-illustration-maths-symbols-icon-set-algebra.jpg" alt="Álgebra">
+          <div>
+            <h2>Álgebra</h2>
+            <p>Estudia símbolos, variables y ecuaciones. Clave para resolver problemas matemáticos abstractos.</p>
+          </div>
+        </div>
 
-    <div class="tema">
-      <h2>🔹 Funciones</h2>
-      <p>Una función es una relación entre un conjunto de entradas y un conjunto de salidas. Es fundamental para entender el cambio, los gráficos, y el comportamiento de muchas variables en ciencia y economía.</p>
-      <a href="funciones.html" class="ver-mas">➡️ Ver más sobre Funciones</a>
-    </div>
+        <div class="materia" onclick="location.href='geometria.html'">
+          <img src="https://img.freepik.com/vector-premium/ilustracion-garabato-forma-geometrica-matematica-estilo-dibujado-mano-color_288411-1180.jpg" alt="Geometría">
+          <div>
+            <h2>Geometría</h2>
+            <p>Explora puntos, líneas, figuras y cuerpos. Aplicaciones en diseño, arte, arquitectura y más.</p>
+          </div>
+        </div>
 
-    <div class="tema">
-      <h2>🔹 Trigonometría</h2>
-      <p>Estudia las relaciones entre los ángulos y los lados de los triángulos. Es clave en la geometría, la física, y muchas ramas de la ingeniería.</p>
-      <a href="trigonometria.html" class="ver-mas">➡️ Ver más sobre Trigonometría</a>
-    </div>
+        <div class="materia" onclick="location.href='aritmetica.html'">
+          <img src="https://c0.klipartz.com/pngpicture/428/352/gratis-png-matematicas-geometria-de-dibujos-animados-tosting-thumbnail.png" alt="Aritmética">
+          <div>
+            <h2>Aritmética</h2>
+            <p>La base numérica de todo. Aprende a dominar operaciones básicas y resolver problemas cotidianos.</p>
+          </div>
+        </div>
 
-    <div class="tema">
-      <h2>🔹 Estadística y Probabilidad</h2>
-      <p>Aquí se analizan datos, se calculan promedios, medianas, y se estudian las posibilidades de que ocurran ciertos eventos. Muy útil para tomar decisiones basadas en información real.</p>
-      <a href="estadistica.html" class="ver-mas">➡️ Ver más sobre Estadística y Probabilidad</a>
+        <div class="materia" onclick="location.href='funciones.html'">
+          <img src="https://static.vecteezy.com/system/resources/previews/005/680/337/non_2x/math-function-linear-icon-thin-line-illustration-contour-symbol-isolated-outline-drawing-vector.jpg" alt="Funciones">
+          <div>
+            <h2>Funciones</h2>
+            <p>Modela relaciones entre variables. Muy útil en economía, ciencia y programación.</p>
+          </div>
+        </div>
+
+        <div class="materia" onclick="location.href='trigonometria.html'">
+          <img src="https://cdn-icons-png.flaticon.com/512/2792/2792357.png" alt="Trigonometría">
+          <div>
+            <h2>Trigonometría</h2>
+            <p>Estudia los ángulos y sus funciones. Vital en física, ingeniería y astronomía.</p>
+          </div>
+        </div>
+
+        <div class="materia" onclick="location.href='estadistica.html'">
+          <img src="https://img.freepik.com/vector-premium/ilustracion-garabato-estadistico_1366-1256.jpg?semt=ais_hybrid&w=740" alt="Estadística">
+          <div>
+            <h2>Estadística y Probabilidad</h2>
+            <p>Analiza datos y mide incertidumbre. Herramientas esenciales para la toma de decisiones.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 </body>
 </html>
 
