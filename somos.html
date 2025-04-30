@@ -1,0 +1,156 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma Educativa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #3a0ca3, #4a148c);
+      color: #f1f1f1;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #2a004f;
+      padding: 1.5rem;
+      text-align: center;
+      animation: slideDown 1.2s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: gold;
+      text-shadow: 0 0 10px #000;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .intro h2 {
+      color: gold;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .card h3 {
+      color: gold;
+      margin-top: 0;
+    }
+
+    .volver-inicio {
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+
+    .volver-inicio button {
+      background-color: gold;
+      color: #240046;
+      font-weight: bold;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00000088;
+      transition: background-color 0.3s ease;
+    }
+
+    .volver-inicio button:hover {
+      background-color: #ffd700;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #240046;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Odín Aprende</h1>
+  </header>
+
+  <div class="intro">
+    <h2>Tu espacio de aprendizaje libre y autónomo</h2>
+    <p>
+      Esta plataforma educativa en línea está diseñada para estudiantes de todos los niveles, así como personas que desean aprender por su cuenta. Ofrece recursos como imágenes, videos y ejercicios interactivos organizados por asignaturas para facilitar el aprendizaje autónomo y adaptado a cada estilo. Aquí se fomenta la curiosidad, el aprendizaje continuo y la colaboración dentro de una comunidad educativa activa.
+    </p>
+  </div>
+
+  <section class="features">
+    <div class="card">
+      <h3>Multinivel</h3>
+      <p>Ideal para estudiantes de escuela y universidad, así como para autodidactas de cualquier edad.</p>
+    </div>
+    <div class="card">
+      <h3>Recursos Variados</h3>
+      <p>Accede a contenidos visuales, auditivos y prácticos para aprender como prefieras.</p>
+    </div>
+    <div class="card">
+      <h3>Aprende a tu ritmo</h3>
+      <p>Elige cuándo y cómo estudiar. Todo está pensado para que avances según tus necesidades.</p>
+    </div>
+    <div class="card">
+      <h3>Comunidad Activa</h3>
+      <p>Comparte conocimiento, resuelve dudas y crece junto a otros estudiantes.</p>
+    </div>
+  </section>
+
+  <div class="volver-inicio">
+    <button onclick="window.location.href='index.html'">Volver al inicio</button>
+  </div>
+
+  <footer>
+    © 2025 Odín Aprende — Plataforma educativa sin límites.
+  </footer>
+</body>
+</html>
