@@ -1,4 +1,79 @@
-<html>
-<h1> Hola mundo! </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Química</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Mi Estudio</div>
+    <div class="enlaces">
+      <a href="index.html">Inicio</a>
+      
+      <a href="quimica.html">Química</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
 
+  <div class="container">
+    <div class="derecha" style="padding-top: 100px; width: 100%;">
+      <h2 class="subtitulo">🧪 Área de Química</h2>
+      <p class="descripcion" style="text-align:center;">
+        Aprende sobre la composición, estructura y cambios de la materia. Haz clic en un tema para explorar más.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+        <div class="materia" onclick="location.href='estructura-atomica.html'">
+          <img src="https://unibetas.com/wp-content/uploads/2022/03/4-estructura-atomica.png" alt="Estructura atómica">
+          <div>
+            <h2>Estructura Atómica</h2>
+            <p>Conoce las partículas subatómicas, modelos atómicos y cómo se organiza la materia a nivel microscópico.</p>
+          </div>
+        </div>
+
+        <div class="materia" onclick="location.href='tabla-periodica.html'">
+          <img src="https://cdn-icons-png.flaticon.com/512/1974/1974404.png" alt="Tabla periódica">
+          <div>
+            <h2>Tabla Periódica</h2>
+            <p>Explora los elementos, su organización y propiedades periódicas que definen su comportamiento químico.</p>
+          </div>
+        </div>
+
+        <div class="materia" onclick="location.href='enlace-quimico.html'">
+          <img src="https://cdn-icons-png.flaticon.com/512/4445/4445200.png" alt="Enlace químico">
+          <div>
+            <h2>Enlace Químico</h2>
+            <p>Descubre cómo se unen los átomos para formar moléculas mediante enlaces iónicos, covalentes y metálicos.</p>
+          </div>
+        </div>
+
+        <div class="materia" onclick="location.href='reacciones.html'">
+          <img src="https://media.istockphoto.com/id/1454758877/es/vector/laboratorio-de-reacciones.jpg?s=612x612&w=0&k=20&c=xLC98oyi5myLQf655ZmbXgaw4Pn--yutq1P6m69F0j8=" alt="Reacciones químicas">
+          <div>
+            <h2>Reacciones Químicas</h2>
+            <p>Estudia los tipos de reacciones, ecuaciones químicas y cómo se transforma la materia en nuevos compuestos.</p>
+          </div>
+        </div>
+
+        <div class="materia" onclick="location.href='estequiometria.html'">
+          <img src="https://www.capgeox.org/uploads/1/3/1/9/131934518/r-1_orig.png" alt="Estequiometría">
+          <div>
+            <h2>Estequiometría</h2>
+            <p>Aprende a calcular cantidades de sustancias involucradas en una reacción química usando proporciones.</p>
+          </div>
+        </div>
+
+        <div class="materia" onclick="location.href='quimica-organica.html'">
+          <img src="https://i.pinimg.com/736x/ca/22/0f/ca220f25ff117cfa34fff2c3661d4902.jpg" alt="Química orgánica">
+          <div>
+            <h2>Química Orgánica</h2>
+            <p>Conoce los compuestos basados en carbono, su estructura y función en organismos y materiales sintéticos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
