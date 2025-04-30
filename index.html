@@ -55,5 +55,19 @@
       </section>
     </div>
   </div>
+    <div class="ia-asistente" onclick="hablarIA()">
+    <img src="ia.avif" alt="IA Aura">
+    <div class="mensaje-ia" id="mensajeIA">
+      Hola, soy <strong>Aura IA</strong>. ¡Puedes preguntarme si tienes alguna duda en específico!
+    </div>
+  </div>
+
+  <script>
+    function hablarIA() {
+      const mensaje = document.getElementById("mensajeIA");
+      mensaje.innerHTML = "Por el momento no estoy en funcionamiento, pero cuando lo esté ¡no dudes en contactarme!";
+    }
+  </script>
+
 </body>
 </html>
