@@ -2,14 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Matemáticas - Álgebra</title>
+  <title>Matemáticas</title>
   <style>
-    /* Sección de Álgebra */
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #3a0ca3, #4a148c);
-      color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #2e005f, #420083);
+      color: white;
     }
 
     #algebra {
@@ -21,7 +20,7 @@
       animation: fadeIn 1.2s ease-in;
     }
 
-    #algebra h2 {
+    h2 {
       font-size: 2.2rem;
       color: gold;
       text-align: center;
@@ -29,44 +28,61 @@
       text-shadow: 0 0 10px #000;
     }
 
-    #algebra article {
+    .tema-nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .tema-nav button {
+      background-color: #ffcc00;
+      border: none;
+      color: black;
+      padding: 0.5rem 1rem;
+      margin: 0 0.3rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tema-nav button:hover {
+      background-color: gold;
+    }
+
+    .tema {
+      display: none;
       background-color: rgba(0, 0, 0, 0.3);
       padding: 1.5rem;
       border-radius: 15px;
-      margin-bottom: 2rem;
       box-shadow: 0 0 15px #00000040;
       transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-bottom: 2rem;
     }
 
-    #algebra article:hover {
-      background-color: rgba(255, 255, 255, 0.07);
-      transform: translateY(-5px);
-    }
-
-    #algebra article h3 {
+    .tema h3 {
       color: #ffcc00;
       margin-top: 0;
       font-size: 1.5rem;
     }
 
-    #algebra article p,
-    #algebra article ul {
+    .tema p,
+    .tema ul {
       font-size: 1.05rem;
       line-height: 1.7;
       color: #f1f1f1;
     }
 
-    #algebra article ul {
+    .tema ul {
       padding-left: 1.5rem;
       list-style: disc;
     }
 
-    #algebra .video {
+    .video {
       margin-top: 1rem;
       text-align: center;
     }
 
-    #algebra .video iframe {
+    .video iframe {
       width: 100%;
       max-width: 560px;
       height: 315px;
@@ -76,77 +92,391 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
   </style>
 </head>
 <body>
 
-  <section id="algebra">
-    <h2>Álgebra</h2>
-    <p>El álgebra es una rama de las matemáticas que estudia la combinación de elementos matemáticos utilizando letras, números y signos.</p>
+<section id="algebra">
+  <h2>Álgebra</h2>
+  <p style="text-align: center;">El álgebra es una rama fundamental de las matemáticas que utiliza letras para representar números desconocidos y estudiar sus relaciones mediante operaciones matemáticas.</p>
 
-    <article id="expresiones-algebraicas">
-      <h3>1. Expresiones Algebraicas</h3>
-      <p>Son combinaciones de números, letras y signos que representan una operación matemática. Por ejemplo: <strong>3x + 5</strong> es una expresión algebraica.</p>
-      <p>Las letras representan variables y los números coeficientes.</p>
-      <div class="video">
-        <p><strong>Video recomendado:</strong></p>
-        <iframe src="https://www.youtube.com/watch?v=gKWRx2pgfoM&ab_channel=GCFAprendeLibre" title="Expresiones Algebraicas" allowfullscreen></iframe>
-      </div>
-    </article>
+  <div class="tema-nav">
+    <button onclick="mostrarTema('tema1')">1. Expresiones</button>
+    <button onclick="mostrarTema('tema2')">2. Ecuaciones 1°</button>
+    <button onclick="mostrarTema('tema3')">3. Ecuaciones 2°</button>
+    <button onclick="mostrarTema('tema4')">4. Identidades</button>
+    <button onclick="mostrarTema('tema5')">5. Factorización</button>
+    <button onclick="mostrarTema('tema6')">6. Inecuaciones</button>
+  </div>
 
-    <article id="ecuaciones-primer-grado">
-      <h3>2. Ecuaciones de Primer Grado</h3>
-      <p>Son igualdades con una variable que está elevada a la potencia uno. Se resuelven aislando la incógnita. Ejemplo: <strong>x + 3 = 7</strong>.</p>
-      <p>Solución: <strong>x = 4</strong>.</p>
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/Ok9TtLxrVh8" title="Ecuaciones de Primer Grado" allowfullscreen></iframe>
-      </div>
-    </article>
+  <!-- Tema 1: Expresiones Algebraicas -->
+  <div id="tema1" class="tema" style="display: block;">
+    <h3>1. Expresiones Algebraicas</h3>
+    <p>Una <strong>expresión algebraica</strong> es una combinación de números, letras (variables) y operaciones matemáticas (suma, resta, multiplicación, etc.).</p>
 
-    <article id="ecuaciones-segundo-grado">
-      <h3>3. Ecuaciones de Segundo Grado</h3>
-      <p>Tienen la forma <strong>ax² + bx + c = 0</strong> y se resuelven con la fórmula general o factorizando.</p>
-      <p>Fórmula general: <strong>x = (-b ± √(b² - 4ac)) / 2a</strong>.</p>
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/fnYwH6vUyIc" title="Ecuaciones de Segundo Grado" allowfullscreen></iframe>
-      </div>
-    </article>
+    <h4>🔤 Elementos de una expresión:</h4>
+    <ul>
+      <li><strong>Coeficiente:</strong> el número que multiplica a la variable. Ej: en 5x, el coeficiente es 5.</li>
+      <li><strong>Variable:</strong> la letra que representa un número desconocido. Ej: x, y, z.</li>
+      <li><strong>Término:</strong> cada parte separada por + o −. Ej: en 3x + 2y − 5, hay tres términos.</li>
+      <li><strong>Grado:</strong> el exponente más alto de la variable. Ej: en x² + x, el grado es 2.</li>
+    </ul>
 
-    <article id="identidades-notables">
-      <h3>4. Identidades Notables</h3>
-      <p>Son fórmulas que permiten simplificar productos. Las más comunes son:</p>
-      <ul>
-        <li><strong>(a + b)² = a² + 2ab + b²</strong></li>
-        <li><strong>(a - b)² = a² - 2ab + b²</strong></li>
-        <li><strong>(a + b)(a - b) = a² - b²</strong></li>
-      </ul>
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/VEgMEdM27UY" title="Identidades Notables" allowfullscreen></iframe>
-      </div>
-    </article>
+    <h4>📌 Ejemplo de expresión:</h4>
+    <p><strong>3x² + 2x - 7</strong></p>
+    <ul>
+      <li>Términos: 3x², 2x, -7</li>
+      <li>Coeficientes: 3, 2 y -7 (constante)</li>
+      <li>Variables: x</li>
+      <li>Grado: 2 (porque x está elevado al cuadrado)</li>
+    </ul>
 
-    <article id="factorizacion">
-      <h3>5. Factorización</h3>
-      <p>Es el proceso de escribir una expresión como producto de factores. Por ejemplo:</p>
-      <p><strong>x² - 9 = (x + 3)(x - 3)</strong></p>
-      <p>Se utilizan métodos como: factor común, trinomio cuadrado perfecto, diferencia de cuadrados, entre otros.</p>
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/5TDMXNHGDXI" title="Factorización" allowfullscreen></iframe>
-      </div>
-    </article>
+    <h4>🧮 Simplificación de expresiones:</h4>
+    <p>Consiste en reducir la expresión combinando términos semejantes.</p>
+    <p><strong>Ejemplo:</strong> 5x + 3x - 2 = (5 + 3)x - 2 = <strong>8x - 2</strong></p>
 
-    <article id="inecuaciones">
-      <h3>6. Inecuaciones</h3>
-      <p>Son desigualdades algebraicas que se resuelven de forma similar a las ecuaciones, pero cuidando el sentido de la desigualdad.</p>
-      <p>Ejemplo: <strong>2x - 5 &lt; 7 → x &lt; 6</strong></p>
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/HyDaMH-LTuY" title="Inecuaciones" allowfullscreen></iframe>
-      </div>
-    </article>
-  </section>
+    <h4>🧪 Evaluación de expresiones:</h4>
+    <p>Consiste en sustituir la variable por un número y resolver.</p>
+    <p><strong>Ejemplo:</strong> Si x = 2, entonces en la expresión 4x - 1:</p>
+    <ul>
+      <li>Reemplazamos: 4(2) - 1 = 8 - 1 = <strong>7</strong></li>
+    </ul>
+
+    <h4>🧠 Otro ejemplo completo:</h4>
+    <p>Expresión: <strong>2x² + 3x - 5</strong></p>
+    <p>Si x = -1:</p>
+    <ol>
+      <li>2(-1)² + 3(-1) - 5</li>
+      <li>2(1) - 3 - 5 = 2 - 3 - 5 = <strong>-6</strong></li>
+    </ol>
+
+    <div class="video">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/_NS3U2nwk0g?si=ZILYCzsw4HTf_LLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Los demás temas siguen aquí como en el bloque anterior -->
+
+
+  <div id="tema2" class="tema">
+  <h3>2. Ecuaciones de Primer Grado</h3>
+  <p>Una <strong>ecuación de primer grado</strong> es una igualdad que contiene una incógnita (generalmente x) elevada a la potencia 1. Se llaman de "primer grado" porque la variable no está elevada a una potencia mayor que uno.</p>
+
+  <h4>📘 Forma general:</h4>
+  <p><strong>ax + b = c</strong>, donde:</p>
+  <ul>
+    <li><strong>a</strong> es el coeficiente de la variable x</li>
+    <li><strong>b</strong> es el término independiente</li>
+    <li><strong>c</strong> es el resultado de la ecuación</li>
+  </ul>
+
+  <h4>🔍 ¿Cómo se resuelven?</h4>
+  <p>El objetivo es <strong>despejar la incógnita</strong> (x). Para eso, se aplican operaciones inversas (suma, resta, multiplicación o división).</p>
+
+  <h4>✅ Ejemplo 1:</h4>
+  <p><strong>Resolver:</strong> x + 5 = 12</p>
+  <ol>
+    <li>Restamos 5 en ambos lados: x + 5 - 5 = 12 - 5</li>
+    <li>Resultado: <strong>x = 7</strong></li>
+  </ol>
+
+  <h4>✅ Ejemplo 2:</h4>
+  <p><strong>Resolver:</strong> 3x - 4 = 11</p>
+  <ol>
+    <li>Sumamos 4 en ambos lados: 3x = 15</li>
+    <li>Dividimos entre 3: x = 15 / 3</li>
+    <li>Resultado: <strong>x = 5</strong></li>
+  </ol>
+
+  <h4>📌 Verificación:</h4>
+  <p>Para comprobar si la solución es correcta, sustituimos el valor de x en la ecuación original.</p>
+  <p>Ejemplo: En la ecuación 3x - 4 = 11, si x = 5 → 3(5) - 4 = 15 - 4 = 11 ✔️</p>
+
+  <h4>⚠️ Errores comunes:</h4>
+  <ul>
+    <li>No aplicar la misma operación a ambos lados de la ecuación</li>
+    <li>Olvidar el signo negativo</li>
+    <li>No simplificar correctamente los términos</li>
+  </ul>
+
+  <h4>🎯 Ejercicio propuesto:</h4>
+  <p>Resuelve: <strong>2x + 6 = 18</strong></p>
+  <details>
+    <summary><strong>Ver solución paso a paso</strong></summary>
+    <ol>
+      <li>Restar 6: 2x = 12</li>
+      <li>Dividir entre 2: x = 6</li>
+    </ol>
+  </details>
+
+  <div class="video">
+    <p><strong>Video recomendado:</strong></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IHblqjW8RY8?si=WcxykJedDWrEjLGL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+  <!-- Tema 3: Ecuaciones de Segundo Grado -->
+  <div id="tema3" class="tema">
+  <h3>3. Ecuaciones de Segundo Grado</h3>
+  <p>Una <strong>ecuación de segundo grado</strong> es una igualdad que tiene la forma <strong>ax² + bx + c = 0</strong>, donde:</p>
+  <ul>
+    <li><strong>a</strong>, <strong>b</strong> y <strong>c</strong> son números reales</li>
+    <li><strong>x</strong> es la variable</li>
+    <li><strong>a ≠ 0</strong> (porque si a = 0, no sería de segundo grado)</li>
+  </ul>
+
+  <h4>📘 Tipos de soluciones:</h4>
+  <p>Las soluciones pueden ser reales o complejas, y se obtienen usando la <strong>fórmula general</strong>:</p>
+  <p style="text-align: center;"><strong>x = (-b ± √(b² - 4ac)) / 2a</strong></p>
+  <p>El valor dentro de la raíz (<strong>b² - 4ac</strong>) se llama <strong>discriminante</strong>.</p>
+
+  <ul>
+    <li>Si es positivo → 2 soluciones reales diferentes</li>
+    <li>Si es cero → 1 solución real (doble raíz)</li>
+    <li>Si es negativo → 2 soluciones complejas</li>
+  </ul>
+
+  <h4>✅ Ejemplo 1: Con 2 soluciones reales</h4>
+  <p><strong>Resolver:</strong> x² - 5x + 6 = 0</p>
+  <ol>
+    <li>Identificar: a = 1, b = -5, c = 6</li>
+    <li>Aplicar fórmula general:<br>
+      x = (-(-5) ± √((-5)² - 4(1)(6))) / 2(1)<br>
+      x = (5 ± √(25 - 24)) / 2<br>
+      x = (5 ± √1) / 2</li>
+    <li>Soluciones: x = (5 + 1)/2 = 3, x = (5 - 1)/2 = 2</li>
+  </ol>
+
+  <h4>✅ Ejemplo 2: Con una solución real (raíz doble)</h4>
+  <p><strong>Resolver:</strong> x² - 4x + 4 = 0</p>
+  <ol>
+    <li>a = 1, b = -4, c = 4</li>
+    <li>Discriminante: (-4)² - 4(1)(4) = 16 - 16 = 0</li>
+    <li>Fórmula: x = (4 ± 0) / 2 → x = 2</li>
+    <li>Solución: <strong>x = 2 (raíz doble)</strong></li>
+  </ol>
+
+  <h4>✅ Ejemplo 3: Con soluciones complejas</h4>
+  <p><strong>Resolver:</strong> x² + x + 1 = 0</p>
+  <ol>
+    <li>Discriminante: 1² - 4(1)(1) = 1 - 4 = -3</li>
+    <li>Como el discriminante es negativo, las soluciones son complejas:</li>
+    <li>x = (-1 ± √(-3)) / 2 → <strong>x = (-1 ± i√3) / 2</strong></li>
+  </ol>
+
+  <h4>🎯 Ejercicio propuesto:</h4>
+  <p>Resuelve: <strong>x² - 2x - 3 = 0</strong></p>
+  <details>
+    <summary><strong>Ver solución paso a paso</strong></summary>
+    <ol>
+      <li>a = 1, b = -2, c = -3</li>
+      <li>Discriminante: (-2)² - 4(1)(-3) = 4 + 12 = 16</li>
+      <li>x = (2 ± √16) / 2 → x = (2 ± 4) / 2</li>
+      <li>Soluciones: x = 3 y x = -1</li>
+    </ol>
+  </details>
+
+  <div class="video">
+    <p><strong>Video recomendado:</strong></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZC67c5ar9mA?si=gKgSZ5q7igNjMpt1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+  <!-- Tema 4: Identidades Notables -->
+<div id="tema4" class="tema">
+  <h3>4. Identidades Notables</h3>
+  <p>Son fórmulas que simplifican productos especiales. Se aprenden por su utilidad en factorización y desarrollo de productos.</p>
+
+  <h4>📌 Principales identidades:</h4>
+  <ul>
+    <li><strong>(a + b)² = a² + 2ab + b²</strong></li>
+    <li><strong>(a - b)² = a² - 2ab + b²</strong></li>
+    <li><strong>(a + b)(a - b) = a² - b²</strong></li>
+  </ul>
+
+  <h4>🔍 Ejemplo 1: Cuadrado de una suma</h4>
+  <p><strong>Expandir:</strong> (x + 3)²</p>
+  <ol>
+    <li>Aplicamos la fórmula: (a + b)² = a² + 2ab + b²</li>
+    <li>a = x, b = 3</li>
+    <li>Resultado: x² + 6x + 9</li>
+  </ol>
+
+  <h4>🔍 Ejemplo 2: Producto de una suma y una resta</h4>
+  <p><strong>Expandir:</strong> (x - 5)(x + 5)</p>
+  <ol>
+    <li>Usamos la fórmula: (a - b)(a + b) = a² - b²</li>
+    <li>a = x, b = 5</li>
+    <li>Resultado: x² - 25</li>
+  </ol>
+
+  <h4>🔍 Ejemplo 3: Cuadrado de una resta</h4>
+  <p><strong>Expandir:</strong> (2x - 4)²</p>
+  <ol>
+    <li>Fórmula: (a - b)² = a² - 2ab + b²</li>
+    <li>a = 2x, b = 4</li>
+    <li>Resultado: 4x² - 16x + 16</li>
+  </ol>
+
+  <h4>🎯 Ejercicio propuesto:</h4>
+  <p>Expande: <strong>(3x + 2)²</strong></p>
+  <details>
+    <summary><strong>Ver solución paso a paso</strong></summary>
+    <ol>
+      <li>Identificar: a = 3x, b = 2</li>
+      <li>Aplicar fórmula: (a + b)² = a² + 2ab + b²</li>
+      <li>(3x)² + 2(3x)(2) + (2)² = 9x² + 12x + 4</li>
+      <li>Resultado final: <strong>9x² + 12x + 4</strong></li>
+    </ol>
+  </details>
+
+  <div class="video">
+    <p><strong>Video recomendado:</strong></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/goHUDRbeejM?si=Wt2f2qPpSulws3vP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+  <!-- Tema 5: Factorización -->
+<div id="tema5" class="tema">
+  <h3>5. Factorización</h3>
+  <p>Es el proceso de escribir una expresión algebraica como el producto de dos o más factores. Es muy útil para resolver ecuaciones, simplificar expresiones y entender la estructura de los polinomios.</p>
+
+  <h4>📚 Principales métodos de factorización:</h4>
+  <ul>
+    <li><strong>1. Factor común:</strong> Consiste en sacar el mayor factor común (número o variable) que se repite en todos los términos.</li>
+    <li><strong>2. Diferencia de cuadrados:</strong> Se aplica cuando tienes dos términos cuadrados perfectos separados por un signo menos: a² - b² = (a - b)(a + b).</li>
+    <li><strong>3. Trinomio cuadrado perfecto:</strong> Reconocer expresiones del tipo a² ± 2ab + b², que se factorizan como (a ± b)².</li>
+    <li><strong>4. Trinomio de la forma ax² + bx + c:</strong> Es el método para factorizar trinomios cuando a ≠ 1, usando el producto y la suma.</li>
+  </ul>
+
+  <h4>🔍 Ejemplo 1: Factor común</h4>
+  <p><strong>Expresión:</strong> 6x² + 12x</p>
+  <ol>
+    <li>Observamos que 6x es común en ambos términos.</li>
+    <li>Dividimos cada término entre 6x: (6x² ÷ 6x = x), (12x ÷ 6x = 2)</li>
+    <li><strong>Resultado:</strong> 6x(x + 2)</li>
+  </ol>
+
+  <h4>🔍 Ejemplo 2: Diferencia de cuadrados</h4>
+  <p><strong>Expresión:</strong> x² - 16</p>
+  <ol>
+    <li>Reconocemos que x² es (x)² y 16 es (4)².</li>
+    <li>Se aplica la fórmula: a² - b² = (a - b)(a + b)</li>
+    <li><strong>Resultado:</strong> (x - 4)(x + 4)</li>
+  </ol>
+
+  <h4>🔍 Ejemplo 3: Trinomio cuadrado perfecto</h4>
+  <p><strong>Expresión:</strong> x² + 6x + 9</p>
+  <ol>
+    <li>Identificamos: x² es (x)² y 9 es (3)²</li>
+    <li>El término medio es 2·x·3 = 6x</li>
+    <li>Se cumple la forma: a² + 2ab + b² = (a + b)²</li>
+    <li><strong>Resultado:</strong> (x + 3)²</li>
+  </ol>
+
+  <h4>🔍 Ejemplo 4: Trinomio de la forma ax² + bx + c</h4>
+  <p><strong>Expresión:</strong> 2x² + 5x + 3</p>
+  <ol>
+    <li>Multiplicamos a·c: 2·3 = 6</li>
+    <li>Buscamos dos números que multiplicados den 6 y sumen 5 → 2 y 3</li>
+    <li>Reescribimos el término del medio: 2x² + 2x + 3x + 3</li>
+    <li>Agrupamos: (2x² + 2x) + (3x + 3)</li>
+    <li>Factor común en cada grupo: 2x(x + 1) + 3(x + 1)</li>
+    <li>Factorizamos por agrupación: <strong>(2x + 3)(x + 1)</strong></li>
+  </ol>
+
+  <h4>🎯 Ejercicio propuesto:</h4>
+  <p>Factoriza: <strong>9x² - 25</strong></p>
+  <details>
+    <summary><strong>Ver solución paso a paso</strong></summary>
+    <ol>
+      <li>9x² = (3x)² y 25 = (5)²</li>
+      <li>Es una diferencia de cuadrados: a² - b² = (a - b)(a + b)</li>
+      <li><strong>Resultado:</strong> (3x - 5)(3x + 5)</li>
+    </ol>
+  </details>
+
+  <div class="video">
+    <p><strong>Video recomendado:</strong></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/a8CUEopWCN0?si=1iOa4VRgy10s0Cw1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+ <!-- Tema 6: Inecuaciones -->
+<div id="tema6" class="tema">
+  <h3>6. Inecuaciones</h3>
+  <p>Las inecuaciones son desigualdades algebraicas que indican que una expresión es mayor, menor, mayor o igual, o menor o igual que otra. Se representan con los signos: <strong>&lt;, &gt;, ≤, ≥</strong>.</p>
+  
+  <p>Se resuelven de manera similar a las ecuaciones, pero con una regla clave: <strong>al multiplicar o dividir por un número negativo, el signo de la desigualdad se invierte</strong>.</p>
+
+  <h4>📌 Tipos de desigualdad:</h4>
+  <ul>
+    <li><strong>x &lt; a:</strong> x es menor que a</li>
+    <li><strong>x &gt; a:</strong> x es mayor que a</li>
+    <li><strong>x ≤ a:</strong> x es menor o igual que a</li>
+    <li><strong>x ≥ a:</strong> x es mayor o igual que a</li>
+  </ul>
+
+  <h4>🔍 Ejemplo 1: Inecuación simple</h4>
+  <p><strong>2x - 5 &lt; 7</strong></p>
+  <ol>
+    <li>Sumamos 5 a ambos lados: 2x &lt; 12</li>
+    <li>Dividimos entre 2: <strong>x &lt; 6 ✅</strong></li>
+  </ol>
+
+  <h4>⚠️ Regla importante:</h4>
+  <p>Si multiplicas o divides ambos lados por un número negativo, debes invertir el signo.</p>
+
+  <h4>✏️ Ejemplo 2: Multiplicación por número negativo</h4>
+  <p><strong>-3x &gt; 9</strong></p>
+  <ol>
+    <li>Dividimos entre -3: x <strong>&lt;</strong> -3 (¡se invierte el signo!)</li>
+    <li><strong>Resultado:</strong> x &lt; -3 ✅</li>
+  </ol>
+
+  <h4>🔍 Ejemplo 3: Inecuación con fracciones</h4>
+  <p><strong>(x - 2)/4 ≥ 3</strong></p>
+  <ol>
+    <li>Multiplicamos ambos lados por 4: x - 2 ≥ 12</li>
+    <li>Sumamos 2: <strong>x ≥ 14</strong></li>
+  </ol>
+
+  <h4>🎯 Ejercicio propuesto:</h4>
+  <p>Resuelve: <strong>5 - 2x ≤ 11</strong></p>
+  <details>
+    <summary><strong>Ver solución paso a paso</strong></summary>
+    <ol>
+      <li>Restamos 5 a ambos lados: -2x ≤ 6</li>
+      <li>Dividimos entre -2 e invertimos el signo: <strong>x ≥ -3</strong></li>
+    </ol>
+  </details>
+
+  <h4>📈 Representación gráfica (opcional):</h4>
+  <p>Las soluciones se pueden representar en la recta numérica, usando puntos abiertos (◯) para &lt; o &gt;, y puntos cerrados (●) para ≤ o ≥, con una flecha indicando el rango.</p>
+
+  <div class="video">
+    <p><strong>Video recomendado:</strong></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/y9vDsarVxtg?si=3V5Jux7_12DNW3O2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+</section>
+
+<script>
+  function mostrarTema(id) {
+    const temas = document.querySelectorAll('.tema');
+    temas.forEach(t => t.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
 
 </body>
 </html>
