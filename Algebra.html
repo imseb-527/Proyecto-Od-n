@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matemáticas - Álgebra</title>
+  <style>
+    /* Sección de Álgebra */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #3a0ca3, #4a148c);
+      color: #f1f1f1;
+    }
+
+    #algebra {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    #algebra h2 {
+      font-size: 2.2rem;
+      color: gold;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #000;
+    }
+
+    #algebra article {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 1.5rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px #00000040;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    #algebra article:hover {
+      background-color: rgba(255, 255, 255, 0.07);
+      transform: translateY(-5px);
+    }
+
+    #algebra article h3 {
+      color: #ffcc00;
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    #algebra article p,
+    #algebra article ul {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #f1f1f1;
+    }
+
+    #algebra article ul {
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+
+    #algebra .video {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    #algebra .video iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 0 20px #00000066;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="algebra">
+    <h2>Álgebra</h2>
+    <p>El álgebra es una rama de las matemáticas que estudia la combinación de elementos matemáticos utilizando letras, números y signos.</p>
+
+    <article id="expresiones-algebraicas">
+      <h3>1. Expresiones Algebraicas</h3>
+      <p>Son combinaciones de números, letras y signos que representan una operación matemática. Por ejemplo: <strong>3x + 5</strong> es una expresión algebraica.</p>
+      <p>Las letras representan variables y los números coeficientes.</p>
+      <div class="video">
+        <p><strong>Video recomendado:</strong></p>
+        <iframe src="https://www.youtube.com/watch?v=gKWRx2pgfoM&ab_channel=GCFAprendeLibre" title="Expresiones Algebraicas" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article id="ecuaciones-primer-grado">
+      <h3>2. Ecuaciones de Primer Grado</h3>
+      <p>Son igualdades con una variable que está elevada a la potencia uno. Se resuelven aislando la incógnita. Ejemplo: <strong>x + 3 = 7</strong>.</p>
+      <p>Solución: <strong>x = 4</strong>.</p>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/Ok9TtLxrVh8" title="Ecuaciones de Primer Grado" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article id="ecuaciones-segundo-grado">
+      <h3>3. Ecuaciones de Segundo Grado</h3>
+      <p>Tienen la forma <strong>ax² + bx + c = 0</strong> y se resuelven con la fórmula general o factorizando.</p>
+      <p>Fórmula general: <strong>x = (-b ± √(b² - 4ac)) / 2a</strong>.</p>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/fnYwH6vUyIc" title="Ecuaciones de Segundo Grado" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article id="identidades-notables">
+      <h3>4. Identidades Notables</h3>
+      <p>Son fórmulas que permiten simplificar productos. Las más comunes son:</p>
+      <ul>
+        <li><strong>(a + b)² = a² + 2ab + b²</strong></li>
+        <li><strong>(a - b)² = a² - 2ab + b²</strong></li>
+        <li><strong>(a + b)(a - b) = a² - b²</strong></li>
+      </ul>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/VEgMEdM27UY" title="Identidades Notables" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article id="factorizacion">
+      <h3>5. Factorización</h3>
+      <p>Es el proceso de escribir una expresión como producto de factores. Por ejemplo:</p>
+      <p><strong>x² - 9 = (x + 3)(x - 3)</strong></p>
+      <p>Se utilizan métodos como: factor común, trinomio cuadrado perfecto, diferencia de cuadrados, entre otros.</p>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/5TDMXNHGDXI" title="Factorización" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article id="inecuaciones">
+      <h3>6. Inecuaciones</h3>
+      <p>Son desigualdades algebraicas que se resuelven de forma similar a las ecuaciones, pero cuidando el sentido de la desigualdad.</p>
+      <p>Ejemplo: <strong>2x - 5 &lt; 7 → x &lt; 6</strong></p>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/HyDaMH-LTuY" title="Inecuaciones" allowfullscreen></iframe>
+      </div>
+    </article>
+  </section>
+
+</body>
+</html>
