@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <title>Matemáticas</title>
   <style>
+    /* --- Estilos base --- */
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -11,6 +17,39 @@
       color: white;
     }
 
+    /* --- Navbar --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    .navbar strong {
+      font-size: 1.4rem;
+      color: gold;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* --- Contenedor principal --- */
     #algebra {
       max-width: 1000px;
       margin: 3rem auto;
@@ -28,9 +67,11 @@
       text-shadow: 0 0 10px #000;
     }
 
+    /* --- Botones navegación de temas --- */
     .tema-nav {
       text-align: center;
       margin-bottom: 2rem;
+      flex-wrap: wrap;
     }
 
     .tema-nav button {
@@ -38,7 +79,7 @@
       border: none;
       color: black;
       padding: 0.5rem 1rem;
-      margin: 0 0.3rem;
+      margin: 0.3rem;
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
@@ -49,24 +90,26 @@
       background-color: gold;
     }
 
+    /* --- Temas --- */
     .tema {
       display: none;
       background-color: rgba(0, 0, 0, 0.3);
       padding: 1.5rem;
       border-radius: 15px;
       box-shadow: 0 0 15px #00000040;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      transition: all 0.3s ease;
       margin-bottom: 2rem;
     }
 
     .tema h3 {
       color: #ffcc00;
       margin-top: 0;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     .tema p,
-    .tema ul {
+    .tema ul,
+    .tema ol {
       font-size: 1.05rem;
       line-height: 1.7;
       color: #f1f1f1;
@@ -75,6 +118,10 @@
     .tema ul {
       padding-left: 1.5rem;
       list-style: disc;
+    }
+
+    .tema ol {
+      padding-left: 1.5rem;
     }
 
     .video {
@@ -91,14 +138,30 @@
       box-shadow: 0 0 20px #00000066;
     }
 
+    /* Animación */
     @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      .tema-nav button {
+        width: 100%;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
-
+<div class="navbar">
+    <div><strong>Odín</strong></div>
+    <div>
+      <a href="index.html">Inicio</a>
+	  <a href="matematicas.html">Matematicas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
 <section id="algebra">
   <h2>Álgebra</h2>
   <p style="text-align: center;">El álgebra es una rama fundamental de las matemáticas que utiliza letras para representar números desconocidos y estudiar sus relaciones mediante operaciones matemáticas.</p>
