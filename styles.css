@@ -213,3 +213,50 @@ body, html {
   flex: 1 1 100%; /* Hace que ambos tomen toda la pantalla en móviles */
   padding: 10px;
 }
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .izquierda {
+    width: 45%;
+    height: calc(100vh - 60px);
+  }
+
+  .derecha {
+    width: 55%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .izquierda, .derecha {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+
+  .ia-asistente {
+    right: 10px;
+    bottom: 10px;
+    transform: scale(0.8);
+  }
+
+  .mensaje-ia {
+    display: none;
+  }
+}
