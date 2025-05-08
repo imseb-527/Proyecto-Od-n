@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trigonometría</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2e0066;
+      color: white;
+    }
+
+    .navbar {
+      background-color: #1a0033;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffcc00;
+      margin-top: 2rem;
+    }
+
+    p {
+      text-align: center;
+      margin: 0 2rem 2rem;
+    }
+
+    .temas-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 2rem;
+    }
+
+    .temas-nav button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      color: black;
+    }
+
+    .temas-nav button:hover {
+      background-color: #ffd633;
+    }
+
+    .tema {
+      display: none;
+      background-color: #3d0073;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 900px;
+    }
+
+    .tema.active {
+      display: block;
+    }
+
+    h2 {
+      color: #ffcc00;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+
+    iframe {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      width: 100%;
+      height: 360px;
+      border-radius: 10px;
+    }
+
+    code {
+      background-color: #1a0033;
+      padding: 0.2rem 0.4rem;
+      border-radius: 5px;
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div><strong>Odín</strong></div>
+    <div>
+      <a href="index.html">Inicio</a>
+      <a href="matematicas.html">Matemáticas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+
+  <h1>Trigonometría</h1>
+  <p>La trigonometría estudia las relaciones entre los ángulos y los lados de los triángulos.</p>
+
+  <div class="temas-nav">
+    <button onclick="mostrarTema('tema1')">1. Razones</button>
+    <button onclick="mostrarTema('tema2')">2. Identidades</button>
+    <button onclick="mostrarTema('tema3')">3. Ecuaciones</button>
+    <button onclick="mostrarTema('tema4')">4. Funciones</button>
+    <button onclick="mostrarTema('tema5')">5. Ángulos</button>
+    <button onclick="mostrarTema('tema6')">6. Aplicaciones</button>
+  </div>
+
+  <div id="tema1" class="tema active">
+  <h2>1. Razones Trigonométricas</h2>
+  <p>Las razones trigonométricas son funciones que relacionan los lados de un triángulo rectángulo con sus ángulos. Son fundamentales en trigonometría para calcular distancias, ángulos y resolver problemas geométricos.</p>
+
+  <h3>📐 Triángulo rectángulo</h3>
+  <p>En un triángulo rectángulo:</p>
+  <ul>
+    <li><strong>Hipotenusa:</strong> lado opuesto al ángulo recto, siempre el más largo.</li>
+    <li><strong>Cateto opuesto:</strong> lado opuesto al ángulo que estamos analizando.</li>
+    <li><strong>Cateto adyacente:</strong> lado contiguo al ángulo que estamos analizando (no la hipotenusa).</li>
+  </ul>
+
+  <h3>📊 Razones trigonométricas básicas</h3>
+  <ul>
+    <li><strong>Seno (sen):</strong> sen(θ) = cateto opuesto / hipotenusa</li>
+    <li><strong>Coseno (cos):</strong> cos(θ) = cateto adyacente / hipotenusa</li>
+    <li><strong>Tangente (tan):</strong> tan(θ) = cateto opuesto / cateto adyacente</li>
+  </ul>
+
+  <h3>🧠 Ejemplo</h3>
+  <p>Dado un triángulo rectángulo donde el ángulo θ = 30°, la hipotenusa mide 10 cm, y queremos hallar los catetos usando razones trigonométricas.</p>
+  <ul>
+    <li>sen(30°) = 0.5 → cateto opuesto = 0.5 × 10 = <strong>5 cm</strong></li>
+    <li>cos(30°) = √3/2 ≈ 0.866 → cateto adyacente = 0.866 × 10 = <strong>8.66 cm</strong></li>
+  </ul>
+
+  <h3>🧪 Ejercicio interactivo</h3>
+  <p>Introduce un ángulo y la hipotenusa para calcular los catetos:</p>
+  <form onsubmit="calcularTrigonometria(); return false;" style="margin-top: 10px;">
+    <label>Ángulo (°): <input type="number" id="angulo" min="0" max="90" required></label><br><br>
+    <label>Hipotenusa: <input type="number" id="hipotenusa" required></label><br><br>
+    <button type="submit">Calcular</button>
+  </form>
+  <div id="resultadoTrig" style="margin-top: 15px; font-weight: bold;"></div>
+
+  <h3>🎥 Video explicativo</h3>
+  <p>A continuación, puedes ver un video que explica las razones trigonométricas con ejemplos visuales:</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin-bottom:20px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CRg5jQRj1Hg?si=eFO0o4cqKXEKuTVh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+            
+    </iframe>
+  </div>
+
+  <script>
+    function calcularTrigonometria() {
+      const angulo = parseFloat(document.getElementById("angulo").value);
+      const hipotenusa = parseFloat(document.getElementById("hipotenusa").value);
+      const radianes = angulo * Math.PI / 180;
+
+      const seno = Math.sin(radianes);
+      const coseno = Math.cos(radianes);
+      const catOpuesto = (seno * hipotenusa).toFixed(2);
+      const catAdyacente = (coseno * hipotenusa).toFixed(2);
+
+      document.getElementById("resultadoTrig").innerHTML =
+        `Para un ángulo de ${angulo}° y una hipotenusa de ${hipotenusa}:<br>
+        • Cateto opuesto = ${catOpuesto} <br>
+        • Cateto adyacente = ${catAdyacente} <br>
+        • Seno = ${seno.toFixed(3)} <br>
+        • Coseno = ${coseno.toFixed(3)} <br>
+        • Tangente = ${(seno / coseno).toFixed(3)}`;
+    }
+  </script>
+</div>
+
+
+  <div id="tema2" class="tema">
+  <h2>2. 🧮 Identidades Fundamentales</h2>
+  <p>Las identidades trigonométricas fundamentales son igualdades que se cumplen para cualquier ángulo y se derivan directamente de las definiciones de las razones trigonométricas en el círculo unitario. Son muy útiles para simplificar expresiones y resolver ecuaciones trigonométricas.</p>
+
+  <h3>📘 Identidades básicas</h3>
+  <ul>
+    <li><code>sen²θ + cos²θ = 1</code> &nbsp; (Identidad pitagórica principal)</li>
+    <li><code>1 + tan²θ = sec²θ</code></li>
+    <li><code>1 + cot²θ = csc²θ</code></li>
+  </ul>
+
+  <p>Estas identidades se basan en las propiedades del triángulo rectángulo y el círculo unitario.</p>
+
+  <h3>📌 Relación con las razones trigonométricas</h3>
+  <ul>
+    <li><strong>Secante (sec):</strong> sec(θ) = 1 / cos(θ)</li>
+    <li><strong>Cosecante (csc):</strong> csc(θ) = 1 / sen(θ)</li>
+    <li><strong>Cotangente (cot):</strong> cot(θ) = 1 / tan(θ) = cos(θ) / sen(θ)</li>
+  </ul>
+
+  <h3>🧠 Ejemplo</h3>
+  <p>Si <code>sen(θ) = 0.6</code>, ¿cuánto vale <code>cos(θ)</code> usando la identidad fundamental?</p>
+  <ul>
+    <li>sen²θ + cos²θ = 1</li>
+    <li>(0.6)² + cos²θ = 1 → 0.36 + cos²θ = 1</li>
+    <li>cos²θ = 1 - 0.36 = 0.64</li>
+    <li>cos(θ) = √0.64 = <strong>0.8</strong> (o -0.8 dependiendo del cuadrante)</li>
+  </ul>
+
+  <h3>🧪 Ejercicio interactivo</h3>
+  <p>Introduce el valor del seno o del coseno y calcula el valor restante usando la identidad pitagórica:</p>
+  <form onsubmit="calcularIdentidad(); return false;" style="margin-top: 10px;">
+    <label>Valor conocido: 
+      <select id="tipoValor">
+        <option value="sen">sen(θ)</option>
+        <option value="cos">cos(θ)</option>
+      </select>
+    </label><br><br>
+    <label>Valor numérico: <input type="number" id="valorTrig" step="0.01" min="0" max="1" required></label><br><br>
+    <button type="submit">Calcular</button>
+  </form>
+  <div id="resultadoIdentidad" style="margin-top: 15px; font-weight: bold;"></div>
+
+  <h3>🎥 Video explicativo</h3>
+  <p>Mira este video que explica paso a paso las identidades trigonométricas fundamentales:</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin-bottom:20px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PbvKVSWyvpI?si=iJivv-i93dxXScVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+           
+    </iframe>
+  </div>
+
+  <script>
+    function calcularIdentidad() {
+      const tipo = document.getElementById("tipoValor").value;
+      const valor = parseFloat(document.getElementById("valorTrig").value);
+      let resultado = 0;
+
+      if (valor < 0 || valor > 1) {
+        document.getElementById("resultadoIdentidad").innerHTML = "El valor debe estar entre 0 y 1.";
+        return;
+      }
+
+      if (tipo === "sen") {
+        resultado = Math.sqrt(1 - Math.pow(valor, 2));
+        document.getElementById("resultadoIdentidad").innerHTML = 
+          `Dado que sen(θ) = ${valor}, entonces cos(θ) = ${resultado.toFixed(3)} (± según el cuadrante)`;
+      } else {
+        resultado = Math.sqrt(1 - Math.pow(valor, 2));
+        document.getElementById("resultadoIdentidad").innerHTML = 
+          `Dado que cos(θ) = ${valor}, entonces sen(θ) = ${resultado.toFixed(3)} (± según el cuadrante)`;
+      }
+    }
+  </script>
+</div>
+
+
+  <div id="tema3" class="tema">
+  <h2>3. 🧩 Ecuaciones Trigonométricas</h2>
+  <p>Las ecuaciones trigonométricas se resuelven al encontrar los valores de los ángulos que satisfacen una determinada igualdad que involucra funciones trigonométricas como seno, coseno o tangente.</p>
+
+  <h3>🛠️ Métodos comunes para resolver</h3>
+  <ul>
+    <li>Usar identidades trigonométricas para simplificar la ecuación.</li>
+    <li>Despejar la función trigonométrica (sen, cos, tan, etc.).</li>
+    <li>Usar la calculadora para hallar soluciones aproximadas.</li>
+    <li>Considerar todas las soluciones en el intervalo dado (por ejemplo, de 0° a 360° o de 0 a 2π).</li>
+  </ul>
+
+  <h3>🧠 Ejemplo</h3>
+  <p>Resolver la ecuación: <code>sen(θ) = 0.5</code> en el intervalo de 0° a 360°</p>
+  <ul>
+    <li>El seno vale 0.5 en dos ángulos: <strong>θ = 30°</strong> y <strong>θ = 150°</strong></li>
+  </ul>
+
+  <h3>🧪 Ejercicio interactivo</h3>
+  <p>Introduce un valor de seno, coseno o tangente y encuentra el ángulo correspondiente (en °):</p>
+  <form onsubmit="resolverEcuacion(); return false;" style="margin-top: 10px;">
+    <label>Función: 
+      <select id="tipoFuncion">
+        <option value="sen">sen</option>
+        <option value="cos">cos</option>
+        <option value="tan">tan</option>
+      </select>
+    </label><br><br>
+    <label>Valor: <input type="number" id="valorFuncion" step="0.01" required></label><br><br>
+    <button type="submit">Resolver</button>
+  </form>
+  <div id="resultadoEcuacion" style="margin-top: 15px; font-weight: bold;"></div>
+
+  <h3>🎥 Video explicativo</h3>
+  <p>Este video muestra cómo resolver ecuaciones trigonométricas paso a paso:</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin-bottom:20px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EiiXAh8_3oo?si=_7xG7JpjNoVWdgqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           
+    </iframe>
+  </div>
+
+  <script>
+    function resolverEcuacion() {
+      const tipo = document.getElementById("tipoFuncion").value;
+      const valor = parseFloat(document.getElementById("valorFuncion").value);
+      let ang1, ang2;
+      if (tipo === "sen") {
+        if (valor < -1 || valor > 1) {
+          document.getElementById("resultadoEcuacion").innerHTML = "Valor no válido para el seno.";
+          return;
+        }
+        ang1 = Math.asin(valor) * 180 / Math.PI;
+        ang2 = 180 - ang1;
+      } else if (tipo === "cos") {
+        if (valor < -1 || valor > 1) {
+          document.getElementById("resultadoEcuacion").innerHTML = "Valor no válido para el coseno.";
+          return;
+        }
+        ang1 = Math.acos(valor) * 180 / Math.PI;
+        ang2 = 360 - ang1;
+      } else {
+        ang1 = Math.atan(valor) * 180 / Math.PI;
+        ang2 = ang1 + 180;
+      }
+      document.getElementById("resultadoEcuacion").innerHTML = 
+        `Soluciones aproximadas: θ ≈ ${ang1.toFixed(2)}° y θ ≈ ${ang2.toFixed(2)}° (en 0°–360°)`;
+    }
+  </script>
+</div>
+
+
+  <div id="tema4" class="tema">
+  <h2>4. 🔄 Funciones Trigonométricas</h2>
+  <p>Las funciones trigonométricas son funciones periódicas que modelan fenómenos ondulatorios como el sonido, la luz y el movimiento armónico. Se basan en las razones trigonométricas del círculo unitario.</p>
+
+  <h3>📊 Características principales</h3>
+  <ul>
+    <li><strong>Seno (sen):</strong> período <code>2π</code>, amplitud 1, comienza en 0</li>
+    <li><strong>Coseno (cos):</strong> período <code>2π</code>, amplitud 1, comienza en 1</li>
+    <li><strong>Tangente (tan):</strong> período <code>π</code>, tiene asíntotas verticales</li>
+  </ul>
+
+  <h3>🧠 Fórmulas generales</h3>
+  <ul>
+    <li><code>f(x) = A·sen(Bx + C) + D</code></li>
+    <li><code>f(x) = A·cos(Bx + C) + D</code></li>
+    <li><strong>A:</strong> amplitud</li>
+    <li><strong>B:</strong> frecuencia angular (define el período)</li>
+    <li><strong>C:</strong> desplazamiento horizontal (fase)</li>
+    <li><strong>D:</strong> desplazamiento vertical</li>
+  </ul>
+
+  <h3>🧪 Ejercicio interactivo</h3>
+  <p>Calcula valores de la función seno modificada <code>f(x) = A·sen(Bx)</code> para un valor dado de x:</p>
+  <form onsubmit="calcularFuncionTrig(); return false;" style="margin-top: 10px;">
+    <label>A (amplitud): <input type="number" id="amplitud" value="1" step="0.1"></label><br><br>
+    <label>B (frecuencia): <input type="number" id="frecuencia" value="1" step="0.1"></label><br><br>
+    <label>x (en radianes): <input type="number" id="valorX" step="0.1" required></label><br><br>
+    <button type="submit">Calcular</button>
+  </form>
+  <div id="resultadoFuncionTrig" style="margin-top: 15px; font-weight: bold;"></div>
+
+  <h3>🎥 Video explicativo</h3>
+  <p>Observa cómo se comportan las funciones seno, coseno y tangente en este video educativo:</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin-bottom:20px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8zVW0U2jn8U?si=93aNkLtXyo5qGdXu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+           
+    </iframe>
+  </div>
+
+  <script>
+    function calcularFuncionTrig() {
+      const A = parseFloat(document.getElementById("amplitud").value);
+      const B = parseFloat(document.getElementById("frecuencia").value);
+      const x = parseFloat(document.getElementById("valorX").value);
+
+      const resultado = A * Math.sin(B * x);
+      document.getElementById("resultadoFuncionTrig").innerHTML = 
+        `f(x) = ${A}·sen(${B}·${x}) = ${resultado.toFixed(3)}`;
+    }
+  </script>
+</div>
+
+
+  <div id="tema5" class="tema">
+  <h2>5. 🎯 Ángulos y Radianes</h2>
+  <p>Los ángulos se pueden medir en <strong>grados</strong> (°) o <strong>radianes</strong> (rad). Ambas unidades son fundamentales en trigonometría y análisis matemático.</p>
+
+  <h3>🔁 Conversión entre grados y radianes</h3>
+  <p>La relación clave es:</p>
+  <ul>
+    <li><code>π radianes = 180°</code></li>
+    <li><code>1 rad ≈ 57.3°</code></li>
+  </ul>
+  <p>Fórmulas de conversión:</p>
+  <ul>
+    <li><code>radianes = grados × (π / 180)</code></li>
+    <li><code>grados = radianes × (180 / π)</code></li>
+  </ul>
+
+  <h3>📐 Ejemplo</h3>
+  <ul>
+    <li>Convertir 60° a radianes: <code>60 × (π / 180) = π / 3 rad</code></li>
+    <li>Convertir π/2 rad a grados: <code>π/2 × (180 / π) = 90°</code></li>
+  </ul>
+
+  <h3>🧪 Conversor interactivo</h3>
+  <p>Convierte fácilmente entre grados y radianes:</p>
+  <form onsubmit="convertirAngulo(); return false;" style="margin-top: 10px;">
+    <label>
+      Valor: <input type="number" id="valorAngulo" step="0.01" required>
+    </label><br><br>
+    <label>
+      Tipo:
+      <select id="tipoConversion">
+        <option value="gradosARadianes">Grados → Radianes</option>
+        <option value="radianesAGrados">Radianes → Grados</option>
+      </select>
+    </label><br><br>
+    <button type="submit">Convertir</button>
+  </form>
+  <div id="resultadoConversion" style="margin-top: 15px; font-weight: bold;"></div>
+
+  <h3>🎥 Video explicativo</h3>
+  <p>Este video te ayudará a entender mejor la conversión entre grados y radianes:</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin-bottom:20px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/seR9VVW4DaI?si=jMrxjro1Vzpk0Uvt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+            
+    </iframe>
+  </div>
+
+  <script>
+    function convertirAngulo() {
+      const valor = parseFloat(document.getElementById("valorAngulo").value);
+      const tipo = document.getElementById("tipoConversion").value;
+      const pi = Math.PI;
+      let resultado;
+
+      if (tipo === "gradosARadianes") {
+        resultado = (valor * pi / 180).toFixed(4);
+        document.getElementById("resultadoConversion").innerHTML = 
+          `${valor}° = ${resultado} rad`;
+      } else {
+        resultado = (valor * 180 / pi).toFixed(2);
+        document.getElementById("resultadoConversion").innerHTML = 
+          `${valor} rad = ${resultado}°`;
+      }
+    }
+  </script>
+</div>
+
+
+  <div id="tema6" class="tema">
+  <h2>6. 🏗️ Aplicaciones de la Trigonometría</h2>
+  <p>La trigonometría es una herramienta clave en muchas disciplinas del mundo real. Su capacidad para relacionar ángulos y distancias la convierte en una aliada fundamental en el diseño, la medición y el análisis.</p>
+
+  <h3>🔧 Aplicaciones destacadas</h3>
+  <ul>
+    <li><strong>Arquitectura:</strong> cálculo de pendientes, estructuras trianguladas y ángulos de diseño.</li>
+    <li><strong>Navegación:</strong> localización de posiciones usando ángulos con respecto a estrellas o satélites (GPS).</li>
+    <li><strong>Astronomía:</strong> determinación de distancias entre planetas y estrellas usando paralaje y ángulos de observación.</li>
+    <li><strong>Ingeniería:</strong> análisis de fuerzas y diseño de mecanismos en puentes, grúas o aviones.</li>
+    <li><strong>Topografía:</strong> medición de terrenos y alturas usando teodolitos y trigonometría básica.</li>
+  </ul>
+
+  <h3>🧠 Ejemplo práctico</h3>
+  <p>Un topógrafo mide un ángulo de elevación de 30° hacia la cima de una montaña desde un punto que está a 200 metros de la base. ¿Cuál es la altura aproximada?</p>
+  <ul>
+    <li><strong>Fórmula:</strong> <code>altura = tan(ángulo) × distancia</code></li>
+    <li><strong>Cálculo:</strong> altura = tan(30°) × 200 ≈ 0.577 × 200 = <strong>115.47 m</strong></li>
+  </ul>
+
+  <h3>🧪 Mini calculadora de altura</h3>
+  <p>Ingresa un ángulo y una distancia para calcular la altura de un objeto usando tangente:</p>
+  <form onsubmit="calcularAltura(); return false;" style="margin-top: 10px;">
+    <label>Ángulo de elevación (°): <input type="number" id="anguloElevacion" min="0" max="90" required></label><br><br>
+    <label>Distancia al objeto (m): <input type="number" id="distanciaObjeto" required></label><br><br>
+    <button type="submit">Calcular altura</button>
+  </form>
+  <div id="resultadoAltura" style="margin-top: 15px; font-weight: bold;"></div>
+
+  <h3>🎥 Video explicativo</h3>
+  <p>Mira este video para descubrir cómo se aplica la trigonometría en diferentes campos de la ciencia y tecnología:</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin-bottom:20px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z_vTPsLrndE?si=oQqz2DNloBL8cyqH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+            
+    </iframe>
+  </div>
+
+  <script>
+    function calcularAltura() {
+      const angulo = parseFloat(document.getElementById("anguloElevacion").value);
+      const distancia = parseFloat(document.getElementById("distanciaObjeto").value);
+      const radianes = angulo * Math.PI / 180;
+      const altura = Math.tan(radianes) * distancia;
+
+      document.getElementById("resultadoAltura").innerHTML =
+        `Altura ≈ ${altura.toFixed(2)} metros`;
+    }
+  </script>
+</div>
+
+
+  <script>
+    function mostrarTema(id) {
+      const temas = document.querySelectorAll('.tema');
+      temas.forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
