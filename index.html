@@ -1,68 +1,62 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Odín - Inicio</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo.png">
 </head>
 <body>
-
-  <!-- Barra de navegación -->
-  <header class="navbar">
+  <div class="navbar">
     <div><strong>Odín</strong></div>
-    <nav>
+    <div>
       <a href="#">Inicio</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
+     
+      <a href="#">Contacto</a>
+    </div>
+  </div>
 
-  <!-- Contenedor principal -->
-  <main class="container">
-    
-    <!-- Sección izquierda: Logo e imagen -->
-    <section class="izquierda">
-      <img src="fondo1.jpg" alt="Fondo artístico de la plataforma Odín" class="imagen-fondo">
-      <div class="logo-contenedor" onclick="location.href='somos.html'" role="button" aria-label="Conoce quiénes somos">
+  <div class="container">
+ 
+    <div class="izquierda">
+      <img src="fondo1.jpg" alt="Fondo" class="imagen-fondo">
+      <div class="logo-contenedor" onclick="location.href='somos.html'">
         <div class="logo-circular"></div>
         <h1 class="titulo">Odín</h1>
       </div>
-    </section>
+    </div>
 
-    <!-- Sección derecha: Materias -->
-    <section class="derecha">
+    
+    <div class="derecha">
       <h2 class="subtitulo">¡Aprende a tu ritmo!</h2>
 
-      <div class="materia" onclick="location.href='historia.html'" role="button" aria-label="Ir a Historia">
-        <img src="imgH.jpg" alt="Imagen de Historia">
+      <section class="materia" onclick="location.href='historia.html'">
+        <img src="imgH.jpg" alt="Historia">
         <div>
           <h2>Historia</h2>
           <p>Explora civilizaciones y eventos que marcaron el mundo.</p>
         </div>
-      </div>
+      </section>
 
-      <div class="materia" onclick="location.href='matematicas.html'" role="button" aria-label="Ir a Matemáticas">
-        <img src="imgM.avif" alt="Imagen de Matemáticas">
+      <section class="materia" onclick="location.href='matematicas.html'">
+        <img src="imgM.avif" alt="Matemáticas">
         <div>
           <h2>Matemáticas</h2>
           <p>Desarrolla tu lógica y pensamiento numérico paso a paso.</p>
         </div>
-      </div>
+      </section>
 
-      <div class="materia" onclick="location.href='quimica.html'" role="button" aria-label="Ir a Química">
-        <img src="imgQ.jpg" alt="Imagen de Química">
+      <section class="materia" onclick="location.href='quimica.html'">
+        <img src="imgQ.jpg" alt="Química">
         <div>
           <h2>Química</h2>
           <p>Comprende la materia y sus transformaciones cotidianas.</p>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Asistente IA -->
-  <div class="ia-asistente" onclick="hablarIA()" role="button" aria-label="Activar asistente virtual Aura">
-    <img src="Aura en la Ciudad Cibernética.png" alt="Avatar del Asistente IA Aura">
+      </section>
+    </div>
+  </div>
+    <div class="ia-asistente" onclick="hablarIA()">
+    <img src="ia.avif" alt="IA Aura">
     <div class="mensaje-ia" id="mensajeIA">
       Hola, soy <strong>Aura IA</strong>. ¡Puedes preguntarme si tienes alguna duda en específico!
     </div>
